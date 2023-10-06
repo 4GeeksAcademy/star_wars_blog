@@ -1,3 +1,29 @@
 /* 
     General Styles
 */
+.my-card {
+    min-width: 400px;
+    margin: 5px;
+    border: 1px solid lightgray;
+    
+}
+
+.my-card > div >img { 
+    width: 100%;
+  }
+
+  .button-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .body-text, .button-footer{
+    padding: 15px;
+  }
+
+  .my-carrusel {
+    display: flex;
+    overflow-x:scroll ;
+    padding: 5px;
+    margin: 5px;
+  }
