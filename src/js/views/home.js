@@ -16,10 +16,10 @@ export const Home = () => {
                         return ( 
                             <div className="my-card">
                         <div>
-                            <img src="" alt=""/>
+                            <img src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} alt=""/>
                         </div>
                         <div className="body-text">
-                            <p>Nombre: </p>
+                            <p>Nombre:</p>
                             <p>Genero</p>
                             <p>Color de ojos</p>
                             <p>Color de cabello</p>
