@@ -1,10 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			
+
 			characters: [],
 			planets: [],
-			urlBase: "https://swapi.dev/api",
+			urlBase: "https://www.swapi.tech/api",
 
 			demo: [
 				{
@@ -45,11 +45,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getCharacters: () => {
 				fetch(`${getStore().urlBase}/people`)
-					.then((response)=> response.json())
+					.then((response) => response.json())
 					.then((data) => {
 						for (let item of data.results) {
+							console.log(item.url)
 							fetch(item.url)
-								.then((response) => response.json)
+								.then((response) => response.json())
 								.then((data) => {
 									setStore({
 										characters: [...getStore().characters, data.result]
@@ -63,14 +64,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(err)
 					})
 
-			}, 
+			},
 			getPlanets: () => {
 				fetch(`${getStore().urlBase}/planets`)
-					.then((response)=> response.json())
+					.then((response) => response.json())
 					.then((data) => {
 						for (let item of data.results) {
 							fetch(item.url)
-								.then((response) => response.json)
+								.then((response) => response.json())
 								.then((data) => {
 									setStore({
 										planets: [...getStore().planets, data.result]
@@ -83,11 +84,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					).catch((err) => {
 						console.log(err)
 					})
-					}
-			},
-			
+			}
+		},
 
-		}
+
+	}
 };
 
 

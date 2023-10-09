@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import "../../styles/home.css"
 import { Context } from "../store/appContext";
 
@@ -19,10 +18,10 @@ export const Home = () => {
                             <img src={`https://starwars-visualguide.com/assets/img/characters/${item.uid}.jpg`} alt=""/>
                         </div>
                         <div className="body-text">
-                            <p>Nombre:</p>
-                            <p>Genero</p>
-                            <p>Color de ojos</p>
-                            <p>Color de cabello</p>
+                            <p> <strong>Nombre:  {item.properties.name} </strong></p>
+                            <p>Genero: {item.properties.gender}</p>
+                            <p>Color de ojos : {item.properties.eye_color}</p>
+                            <p>Color de cabello: {item.properties.hair_color}</p>
                         </div>
                         <div className="button-footer">
                             <button className="btn btn-outline-primary">Learn more</button>
@@ -41,11 +40,12 @@ export const Home = () => {
                         return ( 
                             <div className="my-card">
                         <div>
-                            <img src="" alt=""/>
+                            <img src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`} alt=""/>
                         </div>
                         <div className="body-text">
-                            <p>Terrain: </p>
-                            <p>Population: </p>
+                            <p> <strong>Nombre: {item.properties.name} </strong></p>
+                            <p>Terrain: {item.properties.terrain} </p>
+                            <p>Population: {item.properties.population} </p>
                         </div>
                         <div className="button-footer">
                             <button className="btn btn-outline-primary">Learn more</button>
