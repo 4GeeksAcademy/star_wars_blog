@@ -5,10 +5,10 @@ export const Navbar = () => {
 	return (
 		<nav className=" container navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">Star Wars Blog</span>
+				<span className="navbar-brand mb-0 h1 text-warning">Star Wars Blog</span>
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
+				<Link to="/favorites">
 					<button className="btn btn-primary">Favorites(0)</button>
 				</Link>
 			</div>

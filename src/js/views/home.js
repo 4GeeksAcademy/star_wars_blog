@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "../../styles/home.css"
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 
@@ -9,7 +10,7 @@ export const Home = () => {
         return (
         <>
             <div className="container">
-                <h1 className="text-danger">Characters</h1>
+                <h1 className="text-warning">Characters</h1>
                 <div className="my-carrusel">
                     {store.characters.map((item) => {
                         return ( 
@@ -24,7 +25,7 @@ export const Home = () => {
                             <p>Color de cabello: {item.properties.hair_color}</p>
                         </div>
                         <div className="button-footer">
-                            <button className="btn btn-outline-primary">Learn more</button>
+                        <Link to={`/characters/${item._id}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning">C</button>
                         </div>
                     </div>
@@ -34,7 +35,7 @@ export const Home = () => {
                 </div>
             </div>
             <div className="container">
-                <h1 className="text-danger">Planets</h1>
+                <h1 className="text-warning">Planets</h1>
                 <div className="my-carrusel">
                     {store.planets.map((item) => {
                         return ( 
@@ -48,7 +49,7 @@ export const Home = () => {
                             <p>Population: {item.properties.population} </p>
                         </div>
                         <div className="button-footer">
-                            <button className="btn btn-outline-primary">Learn more</button>
+                            <Link to={`/planets/${item._id}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning">C</button>
                         </div>
                     </div>
