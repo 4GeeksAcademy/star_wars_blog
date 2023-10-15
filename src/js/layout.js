@@ -9,8 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import Detail from "./views/Detail.jsx";
-import Favorites from "./views/favorites.jsx";
+import Detail from "./views/Detail.js";
+import Favorites from "./views/favorites.js"
 
 //create your first component
 const Layout = () => {

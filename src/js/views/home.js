@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Home = () => {
 
     const {store} = useContext(Context)
-
+    console.log(store.characters)
         return (
         <>
             <div className="container">
@@ -25,7 +25,7 @@ export const Home = () => {
                             <p>Color de cabello: {item.properties.hair_color}</p>
                         </div>
                         <div className="button-footer">
-                        <Link to={`/characters/${item._id}`} className="btn btn-outline-primary">Learn more</Link>
+                        <Link to={`/characters/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning">C</button>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ export const Home = () => {
                             <p>Population: {item.properties.population} </p>
                         </div>
                         <div className="button-footer">
-                            <Link to={`/planets/${item._id}`} className="btn btn-outline-primary">Learn more</Link>
+                            <Link to={`/planets/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning">C</button>
                         </div>
                     </div>
