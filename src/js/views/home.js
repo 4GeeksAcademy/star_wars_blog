@@ -4,9 +4,10 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
-
+    const {actions} = useContext(Context)
     const {store} = useContext(Context)
-    console.log(store.characters)
+
+    console.log(store.favorites)
         return (
         <>
             <div className="container">
@@ -26,7 +27,9 @@ export const Home = () => {
                         </div>
                         <div className="button-footer">
                         <Link to={`/characters/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
-                            <button className="btn btn-outline-warning">C</button>
+                            <button className="btn btn-outline-warning"
+                                onClick={() => actions.addFavorites(item.properties.name)}
+                            >C</button>
                         </div>
                     </div>
                         )
@@ -50,7 +53,9 @@ export const Home = () => {
                         </div>
                         <div className="button-footer">
                             <Link to={`/planets/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
-                            <button className="btn btn-outline-warning">C</button>
+                            <button className="btn btn-outline-warning"
+                            onClick={() => actions.addFavorites(item.properties.name)}
+                            >C</button>
                         </div>
                     </div>
                         )
