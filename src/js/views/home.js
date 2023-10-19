@@ -29,7 +29,7 @@ export const Home = () => {
                         <Link to={`/characters/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning"
                                 onClick={() => actions.addFavorites(item.properties.name)}
-                            >C</button>
+                            >♡</button>
                         </div>
                     </div>
                         )
@@ -55,7 +55,7 @@ export const Home = () => {
                             <Link to={`/planets/${item.uid}`} className="btn btn-outline-primary">Learn more</Link>
                             <button className="btn btn-outline-warning"
                             onClick={() => actions.addFavorites(item.properties.name)}
-                            >C</button>
+                            >♡</button>
                         </div>
                     </div>
                         )

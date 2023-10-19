@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const {store, actions} = useContext(Context)
 	return (
-		<nav className=" container navbar navbar-light bg-light mb-3 sticky-top">
+		<nav className=" container-fluid navbar navbar-light bg-dark mb-3 px-4 sticky-top">
 			<Link to="/">
 				<h1 className="navbar-brand mb-0 h1 text-warning">Star Wars Blog</h1>
 			</Link>
