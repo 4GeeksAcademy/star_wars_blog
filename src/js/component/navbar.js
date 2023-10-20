@@ -19,6 +19,7 @@ export const Navbar = () => {
 						return(
 							<li className="dropdown-item">
 								{item} 
+								
 							</li>
 						)
 						}):
